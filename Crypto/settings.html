@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Settings / Profile</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head><body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sideHead">
+      <img src="assets/icons/logo.svg" alt="Crypto"/>
+      <button class="iconBtn sideClose" data-side-close title="Close"><img class="icon" src="assets/icons/x.svg" alt="x"/></button>
+    </div>
+    <nav class="sideNav">
+      <a class="sideLink" href="dashboard.html"><img class="icon" src="assets/icons/chart.svg" alt=""/><span>Dashboard</span></a>
+      <a class="sideLink" href="scanner.html"><img class="icon" src="assets/icons/search.svg" alt=""/><span>Scanner</span></a>
+      <a class="sideLink" href="alerts.html"><img class="icon" src="assets/icons/bell.svg" alt=""/><span>Alerts</span></a>
+      <a class="sideLink" href="trading-bot.html"><img class="icon" src="assets/icons/settings.svg" alt=""/><span>Trading Bot</span></a>
+      <a class="sideLink" href="trading-history.html"><img class="icon" src="assets/icons/settings.svg" alt=""/><span>Trading History</span></a>
+      <a class="sideLink" href="strategy-builder.html"><img class="icon" src="assets/icons/settings.svg" alt=""/><span>Strategy Builder</span></a>
+      <a class="sideLink" href="api-keys.html"><img class="icon" src="assets/icons/settings.svg" alt=""/><span>API Key Manage</span></a>
+      <a class="sideLink active" href="settings.html"><img class="icon" src="assets/icons/settings.svg" alt=""/><span>Settings</span></a>
+      <a class="sideLink" href="legal.html"><img class="icon" src="assets/icons/info.svg" alt=""/><span>Legal Pages</span></a>
+      <a class="sideLink" href="auth.html"><img class="icon" src="assets/icons/logout.svg" alt=""/><span>Logout</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="mainTop">
+      <div class="mainTopInner">
+        <button class="iconBtn mobileMenu" data-menu title="Menu"><img class="icon" src="assets/icons/menu.svg" alt="menu"/></button>
+        <div class="searchPill">
+          <img class="icon" src="assets/icons/search.svg" alt="search"/>
+          <input placeholder="Search coins, alerts, strategies..." />
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="iconBtn" title="Notifications"><img class="icon" src="assets/icons/bell.svg" alt="bell"/></button>
+          <a class="btn primary" href="pricing.html">Upgrade</a>
+        </div>
+      </div>
+    </header>
+    <div class="page">
+
+<div class="pageTitle">
+  <div><h1>Settings / Profile Page</h1><p>Profile settings and saved strategies list like the mockup.</p></div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="notification-settings.html">Notification Settings</a><button class="btn primary">Save</button></div>
+</div>
+
+<div class="grid2">
+  <div class="card panel">
+    <div class="panelHead"><div class="t">Profile</div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div><label class="label">Full Name</label><input class="input" value="Demo User"/></div>
+      <div><label class="label">Email</label><input class="input" value="demo@crypto.app"/></div>
+    </div>
+    <div style="margin-top:12px"><label class="label">Plan</label><div class="badge green">Free Plan</div></div>
+  </div>
+
+  <div class="card panel">
+    <div class="panelHead"><div class="t">Saved Strategies</div><button class="btn small">New</button></div>
+    <div class="tableWrap">
+      <table style="min-width:520px">
+        <thead><tr><th>Name</th><th>Risk</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Volume Spike Strategy</td><td>1%</td><td><span class="pill green">Active</span></td><td><a class="btn small" href="strategy-builder.html">Edit</a></td></tr>
+          <tr><td>Breakout Retest</td><td>0.8%</td><td><span class="pill">Draft</span></td><td><a class="btn small" href="strategy-builder.html">Edit</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<script src="js/charts.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=> {
+  document.querySelectorAll('[data-chart]').forEach(el => window.renderCandleDemo && window.renderCandleDemo(el.id));
+});
+</script>
+</body></html>
